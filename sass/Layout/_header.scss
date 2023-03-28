@@ -1,0 +1,8 @@
+@use "../Utils/variables.scss" as c;
+@use "../Utils/mixins.scss" as m;
+
+header {
+    @include m.boxshadow;
+    position: relative;
+}
+

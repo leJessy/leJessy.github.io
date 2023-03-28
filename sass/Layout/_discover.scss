@@ -1,0 +1,26 @@
+@use "../Utils/variables.scss" as c;
+@use "../Utils/mixins.scss" as m;
+
+nav {
+    background-color: c.$colour-lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    & i {
+        margin-right: 2rem;
+    }
+}
+
+.discover {
+    text-align: center;
+    background-color: c.$colour-backgroundgrey;
+    h1 {
+        padding: 3rem 10% 1rem 10%;
+    }
+    p {
+        padding: 1rem 10% 1rem 10%;
+        font-size: 18px;
+    }  
+}

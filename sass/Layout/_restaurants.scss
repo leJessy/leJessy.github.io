@@ -1,0 +1,90 @@
+@use "../Utils/variables.scss" as c;
+@use "../Utils/mixins.scss" as m;
+
+.restaurants-list {
+    background-color: c.$colour-backgroundgrey;
+    padding-bottom: 4rem;
+    h2 {
+        margin-top: 3rem;
+        margin-left: 5%;
+        margin-bottom: 2rem;
+        padding-top: 3rem;
+        font-size: 24px;
+    }
+}
+
+.restaurants-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    gap: 3rem;
+    @media (min-width: 575px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    @media (min-width: 1000px) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+        width: 95%;
+        margin: auto;
+    }
+    .nouveau {
+        position: relative;
+    }
+    .nouveau::before{
+        content: "Nouveau";
+        position: absolute;
+        height: 2rem;
+        width: 5rem;
+        background-color: c.$colour-mint;
+        color: c.$colour-darkgreen;
+        display: grid;
+        place-items: center;
+        top: 1rem;
+        right: 1.5rem;
+    }
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 95%;
+    height: 300px;
+    border-radius: 25px;
+    margin: auto;
+    @include m.boxshadow;
+    &:hover {
+        @include m.boxshadowdark;
+    }
+    .restaurants-text {
+        padding-top: 1rem;
+        padding-left: 1rem;
+        position: relative;
+        i {
+            position: absolute;
+            right: 0.5rem;
+            top: 1.5rem;
+            font-size: 2rem;
+            width: 32px;
+        }
+        .fa-solid {
+            @include m.heart;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        
+    }
+    .restaurants-img {
+        height: 220px;
+        border-radius: 15px 15px 0 0;
+        object-fit: cover;
+        overflow: hidden;
+        width: 100%;
+    }
+}
