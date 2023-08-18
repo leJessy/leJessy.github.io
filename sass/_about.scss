@@ -1,0 +1,74 @@
+@use "./variables";
+
+#about {
+    height: 100vh;
+    position: relative;
+    background-color: variables.$colour-lemon;
+    h2 {
+        padding-top: 2rem;
+        text-align: center;
+        font-size: 60px;
+        color: variables.$colour-night;
+        margin-bottom: 2rem;
+    }
+    .about-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: right;
+        gap: 2rem;
+        margin-top: 15vh;
+        img {
+            width: 30%;
+        }
+        p {
+            width: 30%;
+            color: variables.$colour-night;
+        }
+    }
+    .arrow {
+        color: variables.$colour-night;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        bottom: 5px;
+        font-size: 80px;
+    }
+    .divpdf {
+        margin-top: 10vh;
+        text-align: center;
+        a {
+            font-size: 40px;
+            text-decoration: none;
+            border: 6px solid variables.$colour-night;
+            color: variables.$colour-night;
+            border-radius: 2.5rem;
+        padding: 1rem;
+        }
+        a:hover {
+            background-color: variables.$colour-night;
+            color: variables.$colour-lemon;
+        }
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+    #about {
+        h2 {
+            padding-top: 0.2rem;
+        }
+        .about-flex {
+            margin-top: 0.5rem;
+            img {
+                display: none;
+            }
+            p {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
