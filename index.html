@@ -1,37 +1,218 @@
 <!DOCTYPE html>
+<!--Ajout de l'attribut LANG-->
 <html lang="FR-fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jessy LANG</title>
-    <meta name="description" content="Mon portfolio">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/d05789b825.js" crossorigin="anonymous"></script>
+	<!--Ajout du titre et d'une description-->
+	<title>Nina Carducci</title>
+	<meta name="description" content="Site internet de Nina Carducci, photographe professionnelle.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+
+	<!-- commentaire a modifier -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/style.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
+	<!--Ajout référencement local au format json via schema.org-->
+	<script type="application/ld+json">
+		{
+		  "@context": "http://schema.org",
+		  "@type": "LocalBusiness",
+		  "name": "Nina Carducci",
+		  "image": "https://ninacarducci.github.io/assets/images/nina.png",
+		  "priceRange": "50 € - 400 €",
+		  "address": {
+			"@type": "PostalAddress",
+			"streetAddress": "68 avenue Alsace-Lorraine",
+			"addressLocality": "Bordeaux",
+			"postalCode": "33200",
+			"addressCountry": "FR"
+		  },
+		  "telephone": "+33-5-56-67-78-89",
+		  "openingHours": "Mo-Fr 10:00-19:00"
+		}
+		</script>
+	<!--Ajout meta tag-->
+	<!--Open Graph/Facebook-->
+	<meta property="og:title" content="Nina Carducci"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="https://ninacarducci.github.io/"/>
+	<meta property="og:image" content="https://ninacarducci.github.io/assets/images/nina.png"/>
+	<meta property="og:description" content="Site internet de Nina Carducci, photographe professionnelle."/>
+	<!--Twitter cards-->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="https://ninacarducci.github.io/">
+	<meta name="twitter:title" content="Nina Carducci">
+	<meta name="twitter:description" content="Site internet de Nina Carducci, photographe professionnelle.">
+	<meta name="twitter:creator" content="@Nina_Carducci">
+	<meta name="twitter:image" content="https://ninacarducci.github.io/assets/images/nina.png">
 </head>
 <body>
-    <section id="accueil">
-        <div class="me">
-            <h1>Jessy Sanchez</h1>
-            <h2>Intégrateur Web</h2>
-            <a href="mailto:jessysanchez@gmail.com" class="contactme">Me contacter</a>
-            <a class="arrow" href="#about">
-                <i class="fa-solid fa-arrow-down"></i>
-            </a>
-        </div>
-    </section>
-
-    <section id="about">
-        <h2>A propos</h2>
-        <div class="about-flex">
-            <img src="./assets/ordinateur.webp" alt="Photo d'un ordinateur portable">
-            <p>fugiat nemo deserunt, minima suscipit ducimus sint praesentium iste, maiores aperiam repudiandae. Fugiat consequatur enim commodi placeat est aut explicabo ea eaque, impedit odit sint minus ex reprehenderit aliquam neque at ullam doloremque atque temporibus. Quod odit ullam fuga temporibus voluptatibus ad, doloribus quo velit explicabo exercitationem sunt in corrupti nemo nisi quia id. Doloremque minima esse placeat, accusamus eos eum ipsam amet? Eos non nostrum et repellendus qui blanditiis quam quidem itaque ullam voluptatum? Nam ipsam pariatur ex quae incidunt. Eum aliquid quia qui, nam eaque fugiat quas placeat sapiente, dignissimos culpa aperiam, eos pariatur est? Commodi, consequatur? Laborum placeat suscipit voluptatum nam, sunt facilis minus laboriosam ipsum praesentium molestiae totam voluptatibus molestias tenetur natus neque. Sit cum voluptate rem saepe ullam nostrum totam mollitia consequatur voluptatibus, adipisci eaque? Nostrum repellendus saepe accusamus?</p>
-        </div>
-        <a class="arrow">
-            <i class="fa-solid fa-arrow-down"></i>
-        </a>
-        <div class="divpdf">
-            <a href="./assets/CV_2022-11-22_Jessy_Lang.pdf">Voir mon CV</a>
-        </div>
-    </section>
+<!--Ajout des alt sur les img-->
+<!--div à header-->
+<header class="top-header">
+	<!--H3 à H1-->
+	<h1 class="name">Nina Carducci</h1>
+	<!--div à nav-->
+	<nav class="nav">   
+		<ul>
+			<li><a href="#about">À propos</a></li>
+			<li><a href="#gallery">Galerie</a></li>
+			<li><a href="#services">Service</a></li>
+			<li><a href="#contact">Contact</a></li>
+			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.png" alt="logo instagram"></a></li>
+		</ul>
+	</nav>
+</header>
+<!--ajout main-->
+<main>
+	<div id="header">
+		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" class="d-block w-100" alt="Photo d'un homme sur un passage piéton'">
+				</div>
+				<div class="carousel-item">
+					<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp" class="d-block w-100" alt="Photo de plusieurs personnes à un concert">
+				</div>
+				<div class="carousel-item">
+					<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp" class="d-block w-100" alt="Photo d'un homme et une femme à un mariage">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</div>
+	<!--div à section-->
+	<section id="about">
+		<div class="picture left">
+			<img src="./assets/images/nina.webp" alt="photo de Nina">
+		</div>
+		<div id="about-me">
+			<!--h3 à h2-->
+			<h2 class="about-me__title">A propos de moi</h2>
+			<!--h6 à h3-->
+			<h3 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h3>
+			<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
+				C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
+		</div>
+	</section>
+	<!--div à section-->
+	<section id="gallery">
+		<!--h3 à h2-->
+		<h2 class="title">Portfolio</h2>
+		<div class="container py-3">
+			<div class="gallery" style="display: none">
+				<!--Ajout de l'attribut loading sur les images et dimensions dans le html-->
+				<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" alt="Photo du publique dans un concert" width="500" height="500" loading="lazy"/>
+				<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp" alt="Photo d'un homme en constume" width="500" height="500" loading="lazy"/>
+				<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp" alt="Photo d'une femme souriant" width="500" height="500" loading="lazy"/>
+				<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp" alt="Photo de 4 mains" width="500" height="500" loading="lazy"/>
+				<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp" alt="Photo d'un homme plissant les yeux" width="500" height="500" loading="lazy"/>
+				<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp" alt="Photo d'un couple en tenu de mariage se tenant la main" width="500" height="500" loading="lazy"/>
+				<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp" alt="Photo d'une jeune femme en extérieur" width="500" height="500" loading="lazy"/>
+				<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp" alt="Photo d'un chanteur sur scène" width="500" height="500" loading="lazy"/>
+				<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp" alt="Photo d'une femme derrière son ordinateur portable, elle sourit" width="500" height="500" loading="lazy"/>
+			</div>
+		</div>
+		<div class="quote">
+			<figure>
+				<!--suppression h1 et class sur blockquote-->
+				<blockquote class="quote__text">
+					Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.
+				</blockquote>
+				<figcaption class="quote__author">- Richard Avedon</figcaption>
+			</figure>
+		</div>
+	</section>
+	<!--div à section-->
+	<section id="services">
+		<!--h3 à h2-->
+		<h2 class="title">Mes services</h2>
+		<div class="container">
+			<div class="service">
+				<div class="service__description">
+					<h3>Shooting photo</h3>
+					<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos</p>
+				</div>
+				<div class="service__price">
+					<h4>350€/demi journée</h4>
+					<span>Matériel, déplacement inclus</span>
+				</div>
+	
+			</div>
+			<div class="service">
+				<div class="service__description">
+					<h3>Retouches</h3>
+					<p>Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications</p>
+				</div>
+				<div class="service__price">
+					<h4>50€/photo</h4>
+					<span>2 AR par photo</span>
+				</div>
+			</div>
+			<div class="service">
+				<div class="service__description">
+					<h3>Album photos</h3>
+					<p>Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un album photo personnalisé</p>
+				</div>
+				<div class="service__price">
+					<h4>400€ album A4</h4>
+					<span>30 pages recto/verso</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--div à section-->
+	<section class="quote">
+		<figure>
+			<!--suppression h1 et ajout class à blockquote-->
+			<blockquote class="quote__text">
+				De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie
+			</blockquote>
+			<figcaption class="quote__author">- Richard Avedon</figcaption>
+		</figure>
+	</section>
+</main>
+<!--div à footer-->
+<footer id="contact">
+	<div class="container">
+		<div class="form-container">
+			<!--h3 à h2-->
+			<h2>Une question ? Une demande de devis ?</h2>
+			<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
+			<form method="post">
+				<!--Ajout des for sur les label-->
+				<label for="nom">Nom</label>
+				<input type="text" name="nom" id="nom">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email">
+				<label for="message">Message</label>
+				<textarea name="message" id="message" cols="30" rows="10"></textarea>
+				<input type="submit" value="Envoyer"/>
+			</form>
+		</div>
+		<div class="picture right">
+			<img src="./assets/images/camera.webp" alt="Photo d'une caméra">
+		</div>
+	</div>
+</footer>
+	<!-- commentaire a modifier -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+	<script src="./assets/maugallery.js"></script>
+	<script src="./assets/scripts.js"></script>
 </body>
 </html>
