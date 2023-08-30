@@ -1,0 +1,229 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the background color of the entire page */
+body {
+    background-color: #142d4c;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #ececec;
+}
+
+/* Improved styling */
+
+/* Header styles */
+header {
+    background-color: #385170;
+    padding: 40px 0;
+    text-align: center;
+}
+
+h3, label, .portfoliadescription {
+    color: #142d4c;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* Navigation styles */
+nav ul {
+    background-color: #385170;
+    padding: 10px 0;
+    border-top: 1px solid #9fd3c7;
+    border-bottom: 1px solid #9fd3c7;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #ececec;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #142d4c;
+}
+
+/* Portfolio items styles */
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.portfolio-item {
+    border: 1px solid #9fd3c7;
+    background-color: #ececec;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(20% - 20px);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.02);
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Contact form styles */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ececec;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+    border: 1px solid #9fd3c7;
+    border-radius: 3px;
+    transition: border-color 0.3s ease;
+    width: 95%;
+    padding: 10px;
+    background-color: #ececec;
+    color: #385170;
+}
+
+input:focus, textarea:focus {
+    border-color: #385170;
+}
+
+button {
+    background-color: #385170;
+    color: #ececec;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #142d4c;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 45, 76, 0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.modal-button {
+    background-color: #142d4c;
+    color: #ececec;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Responsive styles */
+@media (max-width: 800px) {
+    .portfolio {
+        flex-direction: column;
+    }
+
+    .portfolio-item {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+    nav ul {
+        font-size: 15px;
+    }
+    nav a {
+        padding: 10px 5px;
+    }
+    #contact {
+        max-width: 90%;
+        margin: auto;
+    }
+}
+
+#experience {
+    padding: 100px 0;
+}
+
+.experience-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.left-paragraph,
+.right-paragraph {
+    width: 45%; /* Adjust as needed */
+    padding: 20px;
+    color: white;
+    background-color: #142d4c;
+    border-radius: 5px;
+}
+
+.divider {
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    display: block;
+}
+
+.left-paragraph {
+    text-align: right;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .experience-content {
+        flex-direction: column;
+    }
+
+    .divider {
+        display: none; 
+    }
+
+    .left-paragraph,
+    .right-paragraph {
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+    }
+}
+
