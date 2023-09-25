@@ -234,7 +234,7 @@ nav a:hover {
     border-bottom: solid 3px var(--tertiary-color); 
     width: 100%; 
     transform: scaleX(0);
-    animation: borderbot infinite 3s; 
+    animation: borderbot infinite 5s; 
   }
 
 
@@ -259,23 +259,23 @@ nav a:hover {
 }
 
 .html {
-  width: 90%;
+  width: 95%;
   background-color: var(--tertiary-color);
   position: relative;
 
 } 
 .css {
-  width: 80%;
+  width: 90%;
   background-color: var(--tertiary-color);
   position: relative;
 } 
 .js {
-  width: 65%;
+  width: 80%;
   background-color: var(--tertiary-color);
   position: relative;
 } 
 .react {
-  width: 60%;
+  width: 80%;
   background-color: var(--tertiary-color);
   position: relative;
 }
@@ -364,7 +364,168 @@ footer p {
     0% {
         transform: scaleX(0);
     }
-    100% {
+    50% {
         transform: scaleX(1);
     }
 }
+
+/* */ 
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 6rem;    
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 6rem;            
+}
+
+.projets-title-flex {
+  text-align: center;
+}
+
+.projets-title {
+    text-align: center;
+    margin-block: 2rem;
+    display: inline-block;
+  
+}
+
+.projets-title:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px var(--tertiary-color); 
+    width: 100%; 
+    transform: scaleX(0);
+    animation: borderbot infinite 5s; 
+}
+
+.grid-container-first {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  
+}
+
+.grid-img-first img {
+  width: 100%;
+  border: 2px solid var(--secondary-color);
+  margin: 2rem;
+  height: 500px;
+  object-fit: cover;
+  -webkit-box-shadow: 10px -6px 0px 0px var(--secondary-color); 
+  box-shadow: 10px -6px 0px 0px var(--secondary-color);
+}
+
+.grid-descr-first {
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.grid-descr-first h3 {
+  text-align: center;
+}
+
+.grid-tags-first {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.grid-tags-first ul {
+  padding: 0.3rem 2rem;
+  border: 3px solid var(--main-color);
+  background-color: var(--cards-color);
+}
+
+.grid-buttons-first {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.grid-buttons-first button {
+  padding: 1rem;
+  background-color: var(--tertiary-color);
+  color: var(--cards-color);
+  border: none;
+}
+
+.grid-container-second {
+  display: grid;
+  grid-template-columns: 60% 39%;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.grid-img-second img {
+  width: 100%;
+  border: 2px solid var(--secondary-color);
+  height: 500px;
+  object-fit: cover;
+  -webkit-box-shadow: -10px -6px 0px 0px var(--secondary-color); 
+  box-shadow: -10px -6px 0px 0px var(--secondary-color);
+}
+
+.grid-descr-second {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.grid-descr-second h3 {
+  text-align: center;
+}
+
+.grid-tags-second {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.grid-tags-second ul {
+  padding: 0.3rem 2rem;
+  border: 3px solid var(--main-color);
+  background-color: var(--cards-color);
+}
+
+.grid-buttons-second {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.grid-buttons-second button {
+  padding: 1rem;
+  background-color: var(--tertiary-color);
+  color: var(--cards-color);
+  border: none;
+}
+
+.horizontal-line {
+  width: 98%;
+  height: 3px; 
+  background-color: var(--tertiary-color); 
+  margin: 0 auto; 
+}
+
+.margin-bot {
+  margin-bottom: 5rem;
+}
+
