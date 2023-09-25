@@ -68,6 +68,9 @@ nav a:hover {
   background-color: var(--main-color);
 }
 
+.active {
+  background-color: var(--main-color);
+}
 
 .portfolio {
   display: flex;
