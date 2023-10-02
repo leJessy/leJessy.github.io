@@ -23,7 +23,6 @@ a {
   color: inherit;
 }
 
-
 header {
   padding: 40px 0;
   text-align: center;
@@ -160,6 +159,13 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 600px) {
+  #experience {
+    padding-top: 2rem;
+    padding-bottom: 0;
+  }
 }
 
 .experience-content {
