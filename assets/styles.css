@@ -28,6 +28,14 @@ header {
   text-align: center;
 }
 
+.iconsheader {
+  margin-top: 1em;
+}
+
+.iconsheader i {
+  margin-inline: 0.5em;
+}
+
 h3,
 label,
 .portfoliadescription {
@@ -44,7 +52,7 @@ header p {
   opacity: 0.8;
 }
 
-
+/* Navigation */ 
 nav ul {
   background-color: var(--tertiary-color);
   padding: 10px 0;
@@ -71,7 +79,7 @@ nav a:hover {
 .active {
   background-color: var(--main-color);
 }
-
+/* Projets de la page index */
 .portfolio {
   display: flex;
   flex-wrap: wrap;
@@ -90,6 +98,7 @@ nav a:hover {
   box-shadow: 10px -6px 0px 0px var(--secondary-color);
   flex-basis: calc(20% - 20px);
   transition: transform 0.3s ease;
+  position: relative;
 }
 
 .portfolio-item:hover {
@@ -102,8 +111,7 @@ nav a:hover {
   border: 1px solid var(--secondary-color);
   object-fit: cover;
 }
-
-
+/* Modal */ 
 .modal {
   display: none;
   position: absolute;
@@ -125,7 +133,7 @@ nav a:hover {
   gap: 2rem;
 }
 
-.modal-content button {
+.modal-content span {
   background-color: var(--background-color);
   color: var(--tertiary-color);
   border: none;
@@ -133,12 +141,23 @@ nav a:hover {
   border-radius: 3px;
   cursor: pointer;
   text-decoration: none;
+  display: inline-block;
+  width: 150px;
 }
 
+.about-text {
+  margin-inline: 1%;
+  width: 70%;
+  text-align: justify;
+}
 
+/* Media Queries de moes projets index */
 @media (max-width: 800px) {
   .portfolio {
     flex-direction: column;
+  }
+  .about-text {
+    width: 90%;
   }
 
   .portfolio-item {
@@ -161,12 +180,7 @@ nav a:hover {
   align-items: center;
 }
 
-@media (max-width: 600px) {
-  #experience {
-    padding-top: 2rem;
-    padding-bottom: 0;
-  }
-}
+
 
 .experience-content {
   display: flex;
@@ -174,6 +188,7 @@ nav a:hover {
   width: 70%; 
 }
 
+/* Paragraphe de gauche (compétences & éducation */
 .left-paragraph {
   padding: 20px;
   color: var(--tertiary-color);
@@ -185,6 +200,7 @@ nav a:hover {
   text-align: right;
 }
 
+/* Paragraphe de droite (expériences pro) */
 .right-paragraph {
   padding: 20px;
   color: var(--tertiary-color);
@@ -193,9 +209,10 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   flex: 1; 
-  text-align: left;
+  text-align: justify;
 }
 
+/* Ligne vertical entre les 2 paragraphes */
 .divider {
   width: 2px;
   height: 100%;
@@ -212,21 +229,25 @@ nav a:hover {
   margin-right: 2%; 
 }
 
+.left-paragraph h5 {
+  margin-bottom: 20px;
+}
+
 .right-paragraph {
   right: 0;
   margin-left: 2%; 
 }
 
+.right-paragraph h4 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
 
-@media (max-width: 600px) {
-  .experience-content {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .divider {
-    display: none;
-  }
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-flex {
@@ -248,13 +269,6 @@ nav a:hover {
     animation: borderbot infinite 5s; 
   }
 
-
-
-.about-text {
-  margin-inline: 1%;
-}
-
-
 .container {
   width: 100%; 
   background-color: #ddd; 
@@ -268,7 +282,7 @@ nav a:hover {
   color: white; 
   border-radius: 1.5rem 0 0 1.5rem;
 }
-
+/* Barre de compétences (changer le % en fonction) */
 .html {
   width: 95%;
   background-color: var(--tertiary-color);
@@ -340,7 +354,7 @@ nav a:hover {
     text-align: center;
     margin-bottom: 30px;
 }
-
+/* Footer */
 footer {
     background-color: var(--tertiary-color);
     height: 100px;
@@ -370,7 +384,7 @@ footer p {
     transform: translate(-50%, -50%);
 }
   
-
+/* Animation de la barre sous mes sous-titres */ 
 @keyframes borderbot {
     0% {
         transform: scaleX(0);
@@ -380,7 +394,7 @@ footer p {
     }
 }
 
-/* */ 
+/* Page projet */ 
 
 #page-container {
   position: relative;
@@ -391,6 +405,7 @@ footer p {
   padding-bottom: 6rem;    
 }
 
+/* Afin que le footer soit tout de même en bas de la page même si celle ci est vide */
 #footer {
   position: absolute;
   bottom: 0;
@@ -418,6 +433,7 @@ footer p {
     animation: borderbot infinite 5s; 
 }
 
+/* Placement des projets impair du côté gauche en version bureau */
 .grid-container-first {
   display: grid;
   grid-template-columns: 40% 60%;
@@ -441,11 +457,16 @@ footer p {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  text-align: center;
+  text-align: justify;
 }
 
 .grid-descr-first h3 {
   text-align: center;
+}
+
+.grid-descr-first p {
+  width: 70%;
+  margin-inline: auto;
 }
 
 .grid-tags-first {
@@ -455,10 +476,11 @@ footer p {
   justify-content: center;
 }
 
-.grid-tags-first ul {
+.grid-tags-first i {
   padding: 0.3rem 2rem;
   border: 3px solid var(--main-color);
   background-color: var(--cards-color);
+  font-size: 1.5em;
 }
 
 .grid-buttons-first {
@@ -467,13 +489,13 @@ footer p {
   justify-content: center;
 }
 
-.grid-buttons-first button {
-  padding: 1rem;
+.grid-buttons-first span {
+  padding: 0.7rem;
   background-color: var(--tertiary-color);
   color: var(--cards-color);
   border: none;
 }
-
+/* Placement des projets paires du côté droit */
 .grid-container-second {
   display: grid;
   grid-template-columns: 60% 39%;
@@ -496,11 +518,16 @@ footer p {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  text-align: center;
+  text-align: justify;
 }
 
 .grid-descr-second h3 {
   text-align: center;
+}
+
+.grid-descr-second p {
+  width: 70%;
+  margin-inline: auto;
 }
 
 .grid-tags-second {
@@ -510,10 +537,11 @@ footer p {
   justify-content: center;
 }
 
-.grid-tags-second ul {
+.grid-tags-second i {
   padding: 0.3rem 2rem;
   border: 3px solid var(--main-color);
   background-color: var(--cards-color);
+  font-size: 1.5em;
 }
 
 .grid-buttons-second {
@@ -522,8 +550,8 @@ footer p {
   justify-content: center;
 }
 
-.grid-buttons-second button {
-  padding: 1rem;
+.grid-buttons-second span {
+  padding: 0.7rem;
   background-color: var(--tertiary-color);
   color: var(--cards-color);
   border: none;
@@ -543,9 +571,14 @@ footer p {
 @media (max-width: 800px) {
   .left-paragraph {
     text-align: center;
+    margin-right: 0;
   }
   .right-paragraph h3, h4{
     text-align: center;
+  }
+  .right-paragraph {
+    margin-left: 0;
+    margin-top: -2em;
   }
 }
 
@@ -566,6 +599,7 @@ footer p {
     gap: 0;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    justify-content: space-evenly;
   }
   .grid-container-second {
     grid-template-columns: 1fr;
@@ -586,22 +620,23 @@ footer p {
     gap: 0;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    justify-content: space-evenly;
   }
-  .grid-tags-second ul {
+  .grid-tags-second i {
     padding: 0.3rem 0.8rem;
   }
-  .grid-tags-first ul {
+  .grid-tags-first i {
     padding: 0.3rem 0.8rem;
   }
   .horizontal-line {
     width: 60%;
   }
   .grid-descr-first p {
-    width: 95%;
+    width: 90%;
     margin: auto;
   }
   .grid-descr-second p {
-    width: 95%;
+    width: 90%;
     margin: auto;
   }
   .grid-img-second {
@@ -631,4 +666,18 @@ display: inline-block;
   width: 100%; 
   transform: scaleX(0);
   animation: borderbot infinite 5s; 
+}
+
+@media (max-width: 600px) {
+  #experience {
+    padding-top: 2rem;
+    padding-bottom: 0;
+  }
+  .experience-content {
+    flex-direction: column;
+    width: 100%;
+  }
+  .divider {
+    display: none;
+  }
 }
